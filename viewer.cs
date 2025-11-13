@@ -23,6 +23,12 @@ namespace EditorHtml
         {
             var strong = new Regex(@"<s*trong>[^>]*>(.*?)<\s\s*/\s*trong>");
             Console.WriteLine(strong.Replace(text, m => m.Groups[1].Value.ToUpper()));
+
+            var em = new Regex(@"<e*m*>[^>]*>(.*?)<\s\s*/\s*em>");
+            Console.WriteLine(em.Replace(text, m => m.Groups[1].Value.ToLower()));
+            Console.WriteLine(em.Replace(text, m => m.Groups[1].Value.ToLower()));
+
+
         }
     }
 }
