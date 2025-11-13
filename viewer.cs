@@ -29,6 +29,9 @@ namespace EditorHtml
             Console.WriteLine(em.Replace(text, m => m.Groups[1].Value.ToLower()));
 
 
+            var p = new Regex(@"<p*>[^>]*>(.*?)<\s\s*/\s*p>");
+            Console.WriteLine(p.Replace(text, m => m.Groups[1].Value));
+
         }
     }
 }
