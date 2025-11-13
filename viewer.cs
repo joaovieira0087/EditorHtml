@@ -24,11 +24,5 @@ namespace EditorHtml
             var strong = new Regex(@"<s*trong>[^>]*>(.*?)<\s\s*/\s*trong>");
             Console.WriteLine(strong.Replace(text, m => m.Groups[1].Value.ToUpper()));
         }
-
-         public static void Replace2(string text)
-        {
-            var strong = new Regex(@"<s*trong>[^>]*>(.*?)<\s\s*/\s*trong>");
-            Console.WriteLine(strong.Replace(text, m => m.Groups[1].Value.ToUpper()));
-        }
     }
 }
